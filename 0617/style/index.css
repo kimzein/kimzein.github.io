@@ -1,0 +1,203 @@
+@charset "UTF-8";    /*문자 인코딩 유니코드 사용*/
+
+@font-face {
+    font-family: 'SeoulAlrimTTF-Heavy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/SeoulAlrimTTF-Heavy.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+*{    /*모든 요소 공통*/
+    font-family: 'NanumSquareRound';
+    box-sizing: border-box;
+    margin: 0;
+       
+}
+
+ul{   /*모든 리스트 공통*/
+    list-style: none;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+#header{
+    
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#headervideo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 100%;
+    min-height: 100%;
+    
+}
+
+#headertitle{
+    font-family: 'SeoulAlrimTTF-Heavy';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-size: 5vw;
+    width: 100%;
+    text-align: center;
+    text-shadow:0 0 10px rgba(0, 0, 0, 0.6) ;
+}
+
+#enquire{
+    position: absolute;
+    top: 20px;
+    right: 30px;    
+    display: flex;
+    align-items: center;
+
+}
+
+#enquire1{
+    color:#cb937c;
+    font-size: 2em;
+    margin-right: 20px;
+ 
+    
+}
+
+#enquire2{
+    
+    background: #d48b6b;
+    color: #fff;
+    padding: 15px 20px;
+    
+    
+}
+
+#navi{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 85%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+   
+}
+
+#hamburger{
+    background:none;
+    border: none;
+    font-size: 2.5em;
+    color: #cb937c;
+    cursor: pointer;
+    
+}
+
+#logo{
+    margin: 0 10px;
+    height: 35px;
+}
+#menu{
+    display: flex;
+    background: #d8b7a9;
+   
+    position: absolute;
+    align-items: center;
+    left: 55%;
+    transform: translateX(-50%);
+  
+    }
+
+.main{
+    position: relative;
+    
+}
+
+.mainlink{
+    display: block;
+    color: #fff;
+    line-height: 35px;
+    padding: 0 1em;
+    transition: 0.3s;
+    
+}
+
+.main:hover > .mainlink{
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.sub{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 120%;
+    min-width: 200px;
+    background: rgb(255, 255, 255, 0.5);
+    transform: translate(-50%);
+    height: 150px;
+    display: none;
+    
+}
+
+.main:hover > .sub{
+display: block;
+}
+
+.sublink{
+    display: block;
+    color: #000000;
+    line-height: 25px;
+    padding: 0 2em;
+    font-size: 0.8em;
+    transition: 0.3s;
+    width: 100%;
+    text-align: center;
+  
+}   
+    
+#searchbox{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid #f2ca08;
+    width: 95%;
+    max-width: 800px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s;
+    border-radius: 30px;
+}
+    
+.searchicon{
+    font-size: 1.5em;
+    color: #fff;
+    width: 50px;
+    
+    
+}
+
+#searchtitle{
+    color: #fff;
+}
+
+#searchbutton{
+    background: #fff;
+    padding: 1.1em ;
+    border-radius: 30px;
+    border: none;
+    
+}
+
+#searchbox:hover{
+    background: #f2ca08;
+}
