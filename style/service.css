@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+#listbox{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+}
+
+.list > img{
+    width: 100%;
+    display: block;
+}

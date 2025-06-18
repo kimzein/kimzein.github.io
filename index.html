@@ -3,209 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>naverstore</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>index</title>
 
     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
 
-    <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" /> <!--폰트어썸연결-->
 
-        @font-face {
-            font-family: 'SeoulAlrimTTF-Heavy';
-            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/SeoulAlrimTTF-Heavy.woff2') format('woff2');
-            font-weight: 900;
-            font-style: normal;
-}
+    
 
-        *{
-            font-family: 'NanumSquare';
-            box-sizing: border-box;
-            margin: 0;
-        }
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0&icon_names=arrow_back_ios" />  <!--구글아이콘연결(STATIC)-->
 
-        #section{
-            width: 100%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .sectiontitle{
-           text-align: center;
-           margin: 1.5em 0;
-           font-size: 3em;
-           font-family: 'SeoulAlrimTTF-Heavy';
-        }
-
-        .listbox{
-            border: solid;
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            gap: 15px;
-            
-        }
-        
-        .list{
-            border: solid #999;
-            
-            
-            
-        }
-        
-        .list:hover .image{
-            transform: scale(1.1);
-        }
-        
-        .imagebox{
-            overflow: hidden;
-            margin-bottom: 10px;
-            position: relative;
-        }
-        
-        .image{
-            width: 100%;
-            display: block;
-            transition: 0.3s;
-            
-        }
-
-        .producttitle{
-            margin-bottom: 10px;
-         }
-
-        .text{
-            
-            line-height: 1.5em;
-            font-size: 0.8em;
-            margin-bottom: 10px;
-        }
-
-        .price{
-            color: rgb(155, 2, 2);
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            display: inline-block;
-        }
-
-        .price2{
-            color: #999;
-            text-decoration: line-through;
-            display: inline-block;
-
-        }
-
-        .best{
-            position: absolute;
-            top: 0;
-            left: 20px;
-            width: 15%;
-            
-        }
-
-        .iconbox{
-            position: absolute;
-            bottom: 10%;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            opacity: 0;
-            transition: 0.3s;
-        }
-
-        .list:hover .iconbox{
-            opacity: 1;
-        }
-
-        .icon{
-            color: #fff;
-            font-size: 2em;
-            padding: 20px;
-            opacity: 90%;
-          
-        }
-
-        /*태블릿화면 (850-900px이하 화면폭) 스타일*/
-        @media screen and (max-width:850px){
-          .listbox{
-            grid-template-columns: repeat(2,1fr);
-          }
-        }
-        /*스마트폰화면 (450px이하 화면폭) 스타일*/
-        @media screen and (max-width:450px){
-          .listbox{
-            grid-template-columns:1fr;
-          }
-        }
-
-
-    </style>
-
+    <link rel="stylesheet" href="style/common.css"> <!--스타일연결-->
+    
+    <link rel="stylesheet" href="style/index.css">
+    
 </head>
 
 <body>
-    <section id="section">
-        <h2 class="sectiontitle">주간 RANKING</h2>
+<div id="topbox">
+   <span class="material-symbols-outlined" id=hamburger2></span>
+   <img src="images/mashup-logo.svg" alt="" id="logotop">
+   <h1 id="titletop">MASHUP ONFORMARTION</h1>
+
+</div>
+
+    <div id="leftbox">   <!--왼쪽 고정 박스(헤더,내비,푸터)-->
+        <header id="header">
+            <a href="index.html"><img src="images/mashup-logo.svg" alt="로고이미지" id="logo"></a>
+            <h1 id="title">MASHUP ONFORMATION</h1>
+            <p id="title2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, reiciendis.</p>
+        </header>
         
-        <ul class="listbox">
+        <nav id="navi"></nav>
+            <ul id="menu">
+                <li class="main"><a href="0616.html" class="mainlink"><span class="material-symbols-outlined menuicon">arrow_back_ios</span>HOME</a></li>
+                
+                
+                <li class="main"><a href="about.html" class="mainlink"><span class="material-symbols-outlined menuicon">arrow_back_ios</span>ABOUT</a></li>
+                
+                <li class="main"><a href="service.html" class="mainlink"><span class="material-symbols-outlined menuicon">arrow_back_ios</span>SERVICE</a></li>
+                
+                <li class="main"><a href="contact.html" class="mainlink"><span class="material-symbols-outlined menuicon">arrow_back_ios</span>CONTACT</a></li>
+                
+                <li class="main"><a href="working.html" class="mainlink"><span class="material-symbols-outlined menuicon">arrow_back_ios</span>WORKING</a></li>
+            </ul>
+       
+        <footer id="footer">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-solid fa-camera"></i></a>
+            <a href="https:/x.com/" target="_blank"><i class="fa-solid fa-x"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-solid fa-f"></i></a>
+        </footer>
+     </div>
+
+
+     <section id="sec">
+
+        <ul id="listbox">
             <li class="list">
-                <div class="imagebox">
-                    <img src="image/naverstore1.jpg" class="image" >
-                    <img src="image/BEST1.png" class="best">
-                    <div class="iconbox"><i class="fa-regular fa-heart icon"></i>
-                    <i class="fa-solid fa-basket-shopping icon"></i></div>
+                <div class="box">
+                    <img src="images/img-12.jpg" alt="">
+                    <div class="caption">
+                    <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <button class="more">DISCOVER MORE</button></div>
+                    </div>
                 </div>
-                <h3 class="producttitle">민소매 쉬폰 벨트 원피스</h3>  <!--상품이름-->
-                <p class="text">이번 25년 여름 오피스룩을 저격할 민소매 원피스입니다!</p>  <!--상품설명-->
-                <h3 class="price">89000</h3>     <!--할인가격-->
-                <p class="price2">132000</p>     <!--원래가격-->
-           </li>
-            <li class="list">
-                <div class="imagebox">
-                    <img src="image/naverstore2.jpg" class="image" >
-                    <img src="image/BEST2.png" class="best">
-                    <div class="iconbox"><i class="fa-regular fa-heart icon"></i>
-                    <i class="fa-solid fa-basket-shopping icon"></i></div>
+                
+                <div class="box">
+                    <img src="images/img-13.jpg" alt="">
+                    <div class="caption">
+                        <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <button class="more">DISCOVER MORE</button></div>
+                    </div>
                 </div>
+                
+                <div class="box">
+                    <img src="images/img-14.jpg" alt="">
+                    <div class="caption">
+                    <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <button class="more">DISCOVER MORE</button></div>
+                    </div>
                 </div>
-                <h3 class="producttitle">버튼 니트 슬림티</h3>   <!--상품이름-->
-                <p class="text">귀여운 색감, 덥지않은 얇은 린넨 제질의 니트를 가져왔어요~</p>  <!--상품설명-->
-                <h3 class="price">32000</h3>     <!--할인가격-->
-                <p class="price2">37000</p>     <!--원래가격-->
             </li>
-            <li class="list">
-                <div class="imagebox">
-                    <img src="image/naverstore3.jpg" class="image" >
-                    <img src="image/BEST3.png" class="best">
-                    <div class="iconbox"><i class="fa-regular fa-heart icon"></i>
-                    <i class="fa-solid fa-basket-shopping icon"></i></div>
+            
+            <li class="list"> <!--두번째 리스트-->
+                <div class="box">
+                    <img src="images/img-02.jpg" alt="">
+                    <div class="caption">
+                    <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <button class="more">DISCOVER MORE</button></div>
+                    </div>
                 </div>
+                
+                <div class="box">
+                    <img src="images/img-03.jpg" alt="">
+                    <div class="caption">
+                        <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <button class="more">DISCOVER MORE</button>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="producttitle">쉬폰 나시 리본티</h3>   <!--상품이름-->
-                <p class="text">쉬폰 제질로 포근하고 부드럽게 제작된 하객룩을 가져왔어용~~</p>  <!--상품설명-->
-                <h3 class="price">59000</h3>     <!--할인가격-->
-                <p class="price2">62000</p>     <!--원래가격-->
+                
+                <div class="box">
+                    <img src="images/img-04.jpg" alt="">
+                    <div class="caption">
+                    <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <button class="more">DISCOVER MORE</button></div>
+                    </div>
+                </div>
             </li>
-            <li class="list">
-                <div class="imagebox">
-                    <img src="image/naverstore4.jpg" class="image" >
-                    <img src="image/BEST4.png" class="best">
-                    <div class="iconbox"><i class="fa-regular fa-heart icon"></i>
-                    <i class="fa-solid fa-basket-shopping icon"></i></div>
+            
+            <li class="list"> <!--세번째 리스트-->
+                <div class="box">
+                    <img src="images/img-05.jpg" alt="">
+                    <div class="caption">
+                    <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <button class="more">DISCOVER MORE</button>
+                    </div>
+                    </div>
                 </div>
+                
+                <div class="box">
+                    <img src="images/img-06.jpg" alt="">
+                    <div class="caption">
+                    <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <button class="more">DISCOVER MORE</button></div>
+                    </div>
                 </div>
-                <h3 class="producttitle">세미 부츠컷 슬랙스</h3>   <!--상품이름-->
-                <p class="text">오피스룩,데일리룩 으로 너무 이쁜 롱 기장 부츠컷 슬랙스에요!</p> <!--상품설명-->
-                <h3 class="price">47000</h3>     <!--할인가격-->
-                <p class="price2">55000</p>     <!--원래가격-->
+                
+                <div class="box">
+                    <img src="images/img-07.jpg" alt="">
+                    <div class="caption">
+                        <div>
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <button class="more">DISCOVER MORE</button></div>
+                    </div>
+                </div>
             </li>
         </ul>
 
-    </section>
-    
+     </section>
 
 </body>
-
 
 
 </html>

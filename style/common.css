@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;}
+
+*{
+    font-family: 'NanumSquare';
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+#topbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    display: none;
+    align-items: center;
+}
+
+#logotop{
+    height: 30px;
+    margin: 0 10px;
+}
+
+#titletop{
+    font-size: 1.7em;
+}
+
+#hamburger2{
+    font-size: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+    color: #000;
+}
+
+#hamburger:hover{
+    color: #FF7C00;
+}
+
+/*왼쪽 고정 박스 (헤더,네비,푸터*/
+#leftbox{
+    width: 300px;
+    height: 100vh;
+    padding: 1rem;  /*절대크기 맨 상위를 기준으로 루트< 의미함    em은 현재를 기준으로 (상대크기) */
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+#logo{width: 50px;
+margin-bottom: 1rem;}
+
+#title{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    animation:title 5s linear both infinite;
+}
+
+#title2{}
+
+@keyframes title {
+    0%{color: #FF2200;}
+    25%{color: #FF3C00;}
+    50%{color: #FF7C00;}
+    75%{color: #FFCC00;}
+    100%{color: #F9F047;}
+   
+}
+
+#navi{
+    margin-top: 50px;
+}
+
+.mainlink{
+    display: block;
+    position: relative;
+    line-height: 50px;
+    color: #000;
+    font-size: 1rem;
+}
+
+.mainlink:hover{
+    color: #fd8f00;
+    transition: 0.3s;
+}
+
+.mainlink::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #e5ff54;
+    transition: 0.5s ease-out;
+    z-index: -1;
+}
+
+.mainlink:hover::after{
+    width: 100%;
+}
+
+.menuicon{
+    transform: translateY(5px);
+    margin: 0 0.3rem;
+}
+
+#footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    padding: 1em;
+}
+
+#footer > a{
+    color: #eee;
+    margin-left: 1rem;
+    
+}
+
+#footer > a:hover{
+    color: #FF7C00;
+}
+
+#footer > p{
+    margin-top: 0.5rem;
+}
+
+#sec{
+    margin-left: 300px;
+    padding: 1rem;
+    transition: 0.3s;
+}
+
+.sectiontitle{
+    font-family: 'TheJamsil5Bold';
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.smalltitle{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+   
+
+}
+
+.text{
+    line-height: 1.5em;
+    margin-bottom: 1.5rem;
+}
+
+.get{
+    border: none;
+    padding: 1.5em;
+    cursor: pointer;
+    background: #96e6a1;
+    color: #fff;
+    font-weight: 800;
+    transition: 0.3s;
+    }
+
+    .get:hover{
+        background: #eee;
+        box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+        color: #96e6a1;
+    }
+
+    @media screen and (max-width:850px) {
+        #leftbox{
+            transform: translateX(-100%);
+            padding-top: 70px;
+        }
+
+        #sec{   /*오른쪽 섹션 영역 폭 넓히기*/
+            margin-left: 0;
+            margin-top: 60px;
+        }
+
+        #topbox{
+            display: flex;
+        }
+
+        #topbox:hover +#leftbox, #leftbox:hover{
+            transform: translateX(0);
+            z-index: 9;
+        }
+
+        @media screen and (max-width:450px) {
+        #leftbox{
+            grid-template-columns: 1fr important;
+    }
+        }

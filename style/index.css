@@ -1,228 +1,75 @@
 @charset "utf-8";
 
- *{
-            box-sizing: border-box;    /*크기 기준 테두리 선까지*/
-            margin: 0;                     /*여백 없애기 박스와 테두리의 공간0*/
-            font-family: 'NanumSquare';
-            box
-
-        }
-
-        #header > h1{       /*자식 선택자 스타일, 헤더라는 특정부분요소 안에 속한 h1에게 스타일을 주겠다*/
-            font-family: 'NanumPen';
-            font-size: 4em;
-            font-weight: normal;
-            color: #fff;
-            padding-top: 50px ; padding-left: 20px;    /*어디로라는 글자와 박스 윗쪽 거리 50px,, 왼쪽 거리 20px */
-            width: 100%;
-            text-align: center;
-
-        }
-
-        #header > p{     /*헤더라고 이름 지은 특정부분안에 속한 p라는 자식에게 스타일을 적용하겠다*/
-            font-size: 1.2em;
-            color: #fff;
-            padding-left: 20px;
-            padding-top: 55px;
-        }
-
-        #header > h1 > img{  /*헤더라고 이름지은 특정부분안에 속한 h1안에 있는 이미지 자식에게 스타일을 적용하겠다*/
-            width: 50px; margin-right: 10px; /*가로값50(png의크기조절한거임)주고이미지와 어디로 텍스트와의 오른쪽거리값10*/
-        }
+/*index.html 페이지용 스타일*/
 
 
 
-        #container{  /*컨테이너라고 이름지은 특정부분(div)에게 스타일 적용하겠다*/
-             ;  /*박스테두리를 1주고 실선?맞나*/
-            width: 100%;   /*가로폭 최대..?*/
-            max-width: 1200px;   /*가로폭 최대 1200px안에 100%채우기*/
-            margin: auto; /*전체박스를 자동으로 배치하겠다 맞는지모르겟*/
-        }
-
-        #header{   /*헤더라고 이름지은 특정부분(body의header)에게 스타일 적용*/
-            width: 100%;          /*가로값100*/
-            height: 400px; /*세로 길이 400*/
-            background-image: url(../images/header.jpg);  /*배경이미지주겟다*/
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        #header > h1,p{
-            text-align: center;
-            padding-top: 1.5em;
-        }
-       
-        
-       /*내비게이션 영역*/
-        
-       #navi{     /*navi라고 이름을 지은 특정부분에 스타일적용*/
-        width: 100%;
-        height: 50px;
-        background-color: #222222;
-       }
-       
-       #menu{
-        list-style: none;   /*부호(앞에 동그란 점) 없애기*/
-        padding:0 ; /*부호 공간 없애기(텍스트와 ul과의 거리를 없애겠다*/
-        display: flex;      /*리스트는 세로로 정렬되기떔에 가로 방향으로바꾸기 (정렬)*/ 
-        justify-content: center;   /*이 가로로정렬한 flex를 수평 정렬로하여 - 가운데로 만들겠다*/
-        
-       }
-      
-
-
-       .main > a {   /*리스트의 클래스 선택자에서 링크의 스타일을 적용하겠다 */
-        color: #fff;
-        font-size: 1.2em;
-        text-decoration: none;  /*링크아래에있는 선을 없애겠다*/
-        display: block;     /*여백 조절, 공간 채우기*/
-        padding: 0 1em;   /*이거모르겟다 링크텍스트 네비사이거리 세로값0 주고 가로값 16px*/
-        line-height: 50px;  /*내비의 세로값 50이기떄문에 여기도 50 주면 텍스트들이 네비의 중앙?*/
-        transition: 0.3s;    /*전환 효과 0.3초*/
-       }
-        
-       .main > a:hover{   /*리스트에 닿을때마다 배경색깔 변경하겟다*/
-        background-color: #ffe75e;}
+#listbox{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
     
-        #contents{      /*섹션의 이름을 콘텐츠라고 지정하고 스타일주겟다*/ 
-            background-color: #ffe7a5;
-            padding: 1em;
-        }
-        
-        #sectiontitle{  /*섹션안에잇는 h2의 이름 단풍시기 이름 지정하고 한번말ㄴ쓸게*/
-            font-size: 2em;
-            color: #df3434;
-            margin-bottom: 0.5em /*단풍시기와 p와의 아래거리를 0.5만큼 주겠다*/
-        }
-    
-        .text{  /*p의 클래스 선택자로 스타일 ㅈㄱㄱㄷ*/
-            justify-content: center; 
-            font-size: 1.1em;
-            
-          
-        }
+}
 
-        .smalltitle{          /*강원도 설악산이라는 h3의 클래스이름을 지정했고 h3의 스타일주겠다*/
-            background-color: #000;    /*강원도설악산에 검정색배경박스가생김*/
-            color: #fff;  /*강원도 설악산이라는 텍스트의 색깔*/
-            font-size: 1.6em;
-            padding: 0.4em 2em;  /*강원도 설악산과 뒤에 검정배경과의 거리값은 세로로 0.4 가로로 2 */
-            margin-bottom: 0.5em;   /*강원도 설악산이라는 박스를 바닥으로 거리를 1em*/
-            margin-top: 1em ;   /*윗쪽으로 거리 1em*/
-            display: inline-block;   /*내용만큼의 폭으로 만들기 글자처럼 나오는 박스로 지정 이걸 해야지 마진거리를 줄수있다*/
-            box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.8)
+.list{
+    position: relative;
+}
 
-        }
+.box > img{
+    width: 100%;
+    display: block;
+}
 
-        .gallereyBox{         /*사진,영상 리스트 박스 --> ul박스를 스타일하기위한 클래스임*/
-            
-            list-style: none;      /*리스트스타일과 패딩값 필수공식 리스트 앞에있는 점을 없애겠음*/
-            padding: 1em 0;    /*사진과 컨텐츠와의 거리를 위/아래로 1em 주겠다*/
-            display: grid;    /*이 리스트들의 사진,영상을 바둑판식배치를 하겠다*/
-            grid-template-columns:repeat(4,1fr);  /*같은 비율로 4등분*/
-            gap: 20px;  /*바둑판식 배치를 할때 배치 간격을 20px 주겠다*/
-            
+.box{
+    position: relative;
+}
 
-        }
+.caption{
+    position: absolute;
+    top: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    background: rgba(#255, #225, #255, 0.7);
+    backdrop-filter: blur(3px);
 
-        .list{     /*각 리스트*/
-            
-        }  
-        
+}
 
+.caption > h3{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
 
-        .thumb, .video{       /*ui 안에있는 list의 이미지와 영상 스타일 하기 위한 아이디태그*/
-            width: 100%;      /*이미지와 동영상의 가로값을 100주겠음*/
-            display: block;    /*이미지나 영상은 inline(옆에 다른 요소가 올수있는형태)이지만 
-                                    레이아웃에서 한 줄 다 차지하고, 내가 정한 너비와 높이를 제대로 따르도록 하겠다"는 
-                                    의미로 쓰임.이미지나 비디오처럼 기본적으로 inline인 요소들을 
-                                    블록 요소로 바꿔야 스타일이 제대로 적용하기 위해서 이 태그가 쓰였음*/
-        
-               /*이 이미지의 테두리를 원형으로 하겟다*/
-             transition: 0.3s;
-            }
+.more{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
 
-        .map{
-            width: 100%;
-            height: 300px;
-            padding-top: 0.3em;
-            border-radius: 10px 30px;
-        }
+.caption > div > .button{
+    background: #ff7c00;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 3px;
+}
 
-        #weather{
-            background-color: #000;
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5em 2em;
-        
-            border-radius: 10px;
+.caption{
+    opacity: 0;
+    transition: 0.3s;
+}
 
-            display: inline-block;
-            margin: 0.5em 0
+.box:hover > .caption{
+    opacity: 1;
+}
 
-            
-        }
-
-        a{
-        ;
-        }
-
-        #weather:hover{
-            background-color: #df3434;
-        }
-
-        #footer{
-            background-color: #ccc1a2;
-            padding: 1.2em;
-            line-height: 1.6em;
-            text-align: center;
-            font-size: 13px;
-            
-        }
-
-       
-
-        .list{
-            position: relative;  /*배치의 기준(바깥영역)*/
-            overflow: hidden;
-            border-radius: 10px 30px;  /*리스트에다 볼더 레디우스주면 이미지가 커져도 이 레디우스값이 일정함*/
-        }
-
-        .icon{
-            position: absolute;  /*배치의 대상*/
-            top: 10px; 
-            left: 10px;
-            color: #fff;
-            
-        }
-
-        .thumb:hover{
-            transform: scale(1.1);
-        }
-
-        /*테블릿화면 850px 이하 스타일*/
-        @media screen and (max-width:850px) {
-            .gallereyBox{
-                grid-template-columns: repeat(2,1fr);
-            }
-        }
-        
-        /*스마트폰 화면 850px 이하 스타일*/
-        @media screen and (max-width:450px) {
-            .gallereyBox{
-                grid-template-columns:1fr;
-            }
-        }
-
-        #header > h1{
-            font-size: 3em;
-        }
-
-        #menu{
-            display: block;
-        }
-
-        #navi{    /*내비게이션의 세로폭 자동으로 늘리기*/
-            height:auto ;
-        }
+@media screen and (max-width:450px) {
+    #listbox{
+        grid-template-columns: 1fr;
+    }    
+}

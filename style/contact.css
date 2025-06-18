@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+#listbox{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
+.form1{
+    width: 100%;
+    line-height: 50px;
+    padding: 0 1em;
+    margin-bottom: 0.5rem;
+    border: 1px solid #bbbbbb;
+    outline: none;
+}
+
+.form1:focus{
+background: #0FD850;
+}
+
+.list a{
+    color: #0FD850;
+    
+}
+
+.list a:hover{
+    color: #2B8C44;
+}
+
+.icon{
+    font-size: 2em;
+    margin-right: 2rem;
+}
+
+.smalltitle{
+    color: #0FD850;
+    margin-bottom: 1em;
+}
